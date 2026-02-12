@@ -5,7 +5,7 @@ export function NotFoundPage(){
   return(
     <>
       <title>404 Page Not Found</title>
-      <link rel="icon" type="image/svg+xml" href="home-favicon.png"/>
+      <link rel="icon" type="image/svg+xml" href="./../../public/images/home-favicon.png"/>
       <Header/>
       
       <div className="not-found-page">
