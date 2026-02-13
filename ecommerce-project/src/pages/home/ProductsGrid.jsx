@@ -1,5 +1,5 @@
 import { formatMoney } from "../../utils/money";
-import { CheckMark } from './../../assets/images/icons/checkmark.png';
+import CheckMark from './../../assets/images/icons/checkmark.png';
 
 export function ProductsGrid({ products }) {
   return (
