@@ -1,6 +1,9 @@
 import { it, expect, describe } from 'vitest';
 import { formatMoney } from './money';
 
+// describe => group of test
+// Integration Test => test multiple units of code working together
+
 describe('formatMoney',()=>{
   it('formats 1999 cents as $19.99',()=>{
     expect(formatMoney(1999)).toBe('$19.99');
