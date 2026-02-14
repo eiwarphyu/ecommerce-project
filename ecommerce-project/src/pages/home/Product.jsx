@@ -5,6 +5,7 @@ import axios from 'axios';
 
 export function Product({ product, loadCart }) {
   const [quantity, setQuantity] = useState(1);
+  const [add, setAdd] = useState(false);
 
   const selectedQuantity = (event) => {
     const selectQuantity = Number(event.target.value);
@@ -16,7 +17,12 @@ export function Product({ product, loadCart }) {
       quantity: quantity
     })
     await loadCart();
+    setAdd(true);
+    setTimeout(() => {
+      setAdd(false);
+    }, 2000);
   }
+
   return (
     <div key={product.id} className="product-container">
       <div className="product-image-container">
@@ -57,7 +63,8 @@ export function Product({ product, loadCart }) {
 
       <div className="product-spacer"></div>
 
-      <div className="added-to-cart">
+      <div className="added-to-cart"
+        style={{ opacity: add ? 1 : 0 }}>
         <img src={CheckMark} />
         Added
       </div>
