@@ -9,7 +9,7 @@ vi.mock('axios');
 describe('Product components', () => {
   let product;
   let loadCart;
-  
+
   beforeEach(() => {
     product = {
       id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -53,7 +53,6 @@ describe('Product components', () => {
   });
 
   it('adds a product to the cart', async () => {
-
 
     render(<Product product={product} loadCart={loadCart} />);
 
