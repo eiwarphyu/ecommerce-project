@@ -1,6 +1,5 @@
 import { Link, useParams } from 'react-router';
 import { Header } from '../components/Header';
-import './../components/Header.css';
 import './TrackingPage.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
