@@ -1,5 +1,5 @@
 import { NavLink, useNavigate, useSearchParams } from 'react-router';
-import './header.css';
+import './Header.css';
 import LogoWhite from './../assets/images/logo-white.png';
 import MobileLogoWhite from './../assets/images/mobile-logo-white.png';
 import SearchIcon from './../assets/images/icons/search-icon.png';
