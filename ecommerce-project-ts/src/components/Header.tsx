@@ -6,7 +6,15 @@ import SearchIcon from './../assets/images/icons/search-icon.png';
 import CartIcon from './../assets/images/icons/cart-icon.png';
 import { useState } from 'react';
 
-export function Header({cart}) {
+type HeaderProps = {
+  cart: {
+    productId: string;
+    quantity: number;
+    deliveryOptionId: string;
+  }[];
+};
+
+export function Header({cart}: HeaderProps) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
@@ -14,7 +22,7 @@ export function Header({cart}) {
 
   const [search, setSearch] = useState(searchText || '');
   
-  const searchInput = (event)=>{
+  const searchInput = (event: React.ChangeEvent<HTMLInputElement>)=>{
     setSearch(event.target.value);
   }
 
